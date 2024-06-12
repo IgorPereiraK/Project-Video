@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos</title>
+
+    <link href="./video.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script defer src="./video.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Poppins:wght@300&display=swap");
+    </style>
+
+</head>
+
+<body>
+    <main id="mainContainer">
+        <header id="headerContainer">
+            <h1>VÍDEOS / FILMES</h1>
+        </header>
+        <section id="videoContainer">
+            <video id="video" src="./Videos/video-amv.mp4"
+                poster="./Videos/hacen-las-preguntas-los-animes-que-sabe-nada_4057368.png"></video>
+            <section id="controls">
+                <article id="barraContainer">
+                    <div id="progressBarra"></div>
+                    <input id="inputProgressBarra" onchange="videoTime()" type="range" min="0" max="1000" value="0"
+                        step="1">
+                </article>
+
+                <article id="leftContainer">
+                    <img id="playStopIcon" class="icon" onclick="playStop()" src="./Videos/play.png"
+                        alt="Icone de Play">
+                    <img id="back" class="icon" onclick="back()" src="./Videos/back.png" alt="Icone de volta 10s">
+                    <img id="forward" class="icon" onclick="forward()" src="./Videos/forward.png"
+                        alt="Icone de adiantar 10s">
+                    <span class="time" id="currentTime">0:00</span>
+                    <span class="time">/</span>
+                    <span class="time" id="totalTime">0:00</span>
+                </article>
+
+                <section id="rightContainer">
+                    <article id="volumeContainer">
+                        <img class="icon" onclick="aumentar_vel()" src="./Videos/outline_control_point_white_24dp.png" alt="Icone de aumenta a velocidade">
+                        <span id="vel">1x</span>
+                        <img class="icon" onclick="diminuir_vel()" src="./Videos/outline_remove_circle_outline_white_24dp.png" alt="Icone de diminuir a velocidade">
+                        <img id="iconVolume" class="icon" src="./Videos/volume.png" alt="Icone de volume">
+                        <input id="inputVolumeBarra" onchange="volumeBarra()" type="range" min="0" max="100" value="0"
+                            step="1">
+                        <img id="fullscreenIcon" class="icon" onclick="fullscreen()" src="./Videos/fullscreen.png"
+                            alt="Icone de fullscreen">
+                    </article>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer id="footerContainer">
+        <a id="title" href="https://github.com/Igor2kLevi" target="_blank">
+            <p>Desenvolvido por Igor Pereira - <i class="fab fa-github"></i>Github</p>
+        </a>
+        <p id="text">
+            Todos os direitos reservados para TV Tokyo. Video Player desenvolvido apenas para fins estudantis sem
+            nenhuma intenção
+            comercial.
+        </p>
+        <a id="credits" href="https://icons8.com/icon/set/media-controls/ios-glyphs">
+            All icons by Icons8
+        </a>
+    </footer>
+</body>
+
+</html>
